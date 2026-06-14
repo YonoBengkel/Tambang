@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AlertTriangle, CheckCircle, RefreshCcw, Cpu, ShieldAlert, Activity } from 'lucide-react';
 
-const API_URL = "http://localhost:8000/api/predict";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api/predict";
 
 export default function EvaluationTab() {
   const [loading, setLoading] = useState(false);
