@@ -11,7 +11,7 @@ export default function TrendsTab() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
-    Papa.parse('/Mining.csv', {
+    Papa.parse('/Mining_sample.csv', {
       download: true,
       header: true,
       preview: 300,

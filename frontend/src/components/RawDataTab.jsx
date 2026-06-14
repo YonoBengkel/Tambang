@@ -40,7 +40,7 @@ export default function RawDataTab() {
   const tableContainerRef = useRef(null);
 
   useEffect(() => {
-    Papa.parse('/Mining.csv', {
+    Papa.parse('/Mining_sample.csv', {
       download: true,
       header: true,
       preview: 20000,
@@ -175,7 +175,7 @@ export default function RawDataTab() {
       <div className="bg-white/40 backdrop-blur-xl rounded-2xl border border-slate-200 shadow-sm flex-1 flex flex-col min-h-0 overflow-hidden relative">
         {loading ? (
           <div className="flex-1 flex items-center justify-center text-slate-800 font-bold">
-            <span className="animate-pulse">Memuat dataset Mining.csv...</span>
+            <span className="animate-pulse">Memuat dataset Mining_sample.csv...</span>
           </div>
         ) : (
           <div className="flex-1 overflow-auto custom-scrollbar" dir="rtl" onScroll={handleScroll} ref={tableContainerRef}>
